@@ -6,7 +6,7 @@ RUN apk add --no-cache make
 WORKDIR /build
 
 # Copy and download dependency using go mod.
-COPY go.mod ./
+COPY go.mod go.sum ./
 RUN go mod download
 
 # Copy the code into the container.
@@ -20,4 +20,4 @@ RUN make build
 EXPOSE 3000
 
 # Command to run when starting the container.
-ENTRYPOINT ["/build/bin/log_ingestor"]
+ENTRYPOINT ["bin/log_ingestor"]

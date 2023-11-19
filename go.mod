@@ -3,6 +3,7 @@ module github.com/FaizBShah/log-ingestor
 go 1.20
 
 require (
+	github.com/gorilla/mux v1.8.1
 	go.mongodb.org/mongo-driver v1.13.0
 	gorm.io/driver/postgres v1.5.4
 	gorm.io/gorm v1.25.5
